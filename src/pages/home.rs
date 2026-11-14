@@ -7,6 +7,14 @@ pub(crate) fn Home() -> impl IntoView {
         <h1 id="home-heading">"Jun Yu Jian Portfolio"</h1>
         <p class="role">"Gameplay & Engine Programmer"</p>
         <p>"C++ · Unreal Engine · Unity · Rust · Blender"</p>
+        // Replace the placeholder with an image when a portrait is ready.
+        <div class="home-portrait" role="img" aria-label="Profile photo coming soon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+                <circle cx="32" cy="23" r="10"/>
+                <path d="M13 54v-4a19 19 0 0 1 38 0v4"/>
+            </svg>
+            <span>"Photo coming soon"</span>
+        </div>
         <div class="home-sections">
             <section class="home-card" aria-labelledby="home-background">
                 <h2 id="home-background">"Background"</h2>

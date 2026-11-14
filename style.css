@@ -483,6 +483,34 @@ p {
   max-width: 46rem;
 }
 
+.home-portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: min(100%, 13rem);
+  aspect-ratio: 4 / 5;
+  margin-top: 2rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: .5rem;
+  background: color-mix(in srgb, var(--ink) 3%, var(--paper));
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+.home-portrait svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.home-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .home-sections, .about-sections {
   max-width: 46rem;
   margin-top: 2rem;
