@@ -1,6 +1,6 @@
 use leptos::{ev::hashchange, prelude::*};
 
-const RESUME_PDF: &str = "/public/resume.pdf";
+const RESUME_PDF: &str = "public/resume.pdf";
 
 fn main() {
     mount_to_body(App);
@@ -77,7 +77,7 @@ const PROJECTS: [Project; 7] = [
         category: "Personal Project · In Development",
         tools: "C++ · DirectX 12",
         description: "A renderer in development using C++ and DirectX 12. The current demo renders a rotating 3D plane with per-vertex color.",
-        media: ProjectMedia::Video("/public/videos/C++DX12RendererShowcase.mp4"),
+        media: ProjectMedia::Video("public/videos/C++DX12RendererShowcase.mp4"),
         media_heading: Some("Renderer Showcase"),
         detail_images: &[],
         gameplay_video: None,
@@ -108,7 +108,7 @@ const PROJECTS: [Project; 7] = [
         group: ProjectGroup::School,
         tools: "C++ · OpenGL · JSON",
         description: "Bubbly Wubbly is a top-down shooter made by Team Ransomware using a custom 2D engine in C++ and OpenGL. My work included sprite and text rendering, Y- and Z-based sorting, fog and lighting effects, JSON serialization, and entity and system programming. I also contributed to part of the mesh-rendering implementation.",
-        media: ProjectMedia::Video("/public/videos/BubblyWubbly.mp4"),
+        media: ProjectMedia::Video("public/videos/BubblyWubbly.mp4"),
         media_heading: Some("Gameplay Showcase"),
         detail_images: &[],
         gameplay_video: None,
@@ -135,11 +135,11 @@ const PROJECTS: [Project; 7] = [
         group: ProjectGroup::School,
         tools: "Unity",
         description: "A procedural dungeon generator in Unity that creates randomized hubs and connects them with corridors using my own A* pathfinding implementation. The showcase video also features custom pixel art I created for the dungeon.",
-        media: ProjectMedia::Video("/public/videos/PCGDungeonVideo.mp4"),
+        media: ProjectMedia::Video("public/videos/PCGDungeonVideo.mp4"),
         gameplay_video: None,
         media_heading: Some("Dungeon Showcase"),
         detail_images: &[
-            ("Generated Dungeon Map", "/public/images/PCGDungeonShowcase.png", "Generated dungeon with hub areas connected by corridors and custom pixel art"),
+            ("Generated Dungeon Map", "public/images/PCGDungeonShowcase.png", "Generated dungeon with hub areas connected by corridors and custom pixel art"),
         ],
         link: None,
     },
@@ -164,11 +164,11 @@ const PROJECTS: [Project; 7] = [
         group: ProjectGroup::School,
         tools: "Unreal Engine 5",
         description: "My spider enemy AI contribution to an ongoing horror game developed by Team Cryptid Craft in Unreal Engine 5. My work focuses on AI Perception, StateTree behavior, and climbing AI within the larger team project.",
-        media: ProjectMedia::Video("/public/videos/SpiderEnemyModelShowcase0001-0300.mp4"),
-        gameplay_video: Some("/public/videos/SpiderEnemyShowcase.mp4"),
+        media: ProjectMedia::Video("public/videos/SpiderEnemyModelShowcase0001-0300.mp4"),
+        gameplay_video: Some("public/videos/SpiderEnemyShowcase.mp4"),
         media_heading: Some("Model Showcase"),
         detail_images: &[
-            ("StateTree Behavior", "/public/images/SpiderAIStateTree.png", "Spider AI StateTree showing normal behavior, combat decisions, attack selection, and knockback reactions"),
+            ("StateTree Behavior", "public/images/SpiderAIStateTree.png", "Spider AI StateTree showing normal behavior, combat decisions, attack selection, and knockback reactions"),
         ],
         link: None,
     },
@@ -193,7 +193,7 @@ const PROJECTS: [Project; 7] = [
         group: ProjectGroup::Personal,
         tools: "Rust · OpenGL · egui",
         description: "A custom 2D game engine written in Rust using OpenGL, with an egui-based scene editor. The new showcase demonstrates scene editing and object manipulation alongside a rendered pixel-art scene.",
-        media: ProjectMedia::Video("/public/videos/Custom2DengineShowcase.mp4"),
+        media: ProjectMedia::Video("public/videos/Custom2DengineShowcase.mp4"),
         media_heading: None,
         detail_images: &[],
         gameplay_video: None,
@@ -218,11 +218,11 @@ const PROJECTS: [Project; 7] = [
         group: ProjectGroup::School,
         tools: "Level Design",
         description: "A level design project set on an abandoned sky island. Explore the environment through a video showcase, an overhead view of the level, and a vista of the island.",
-        media: ProjectMedia::Video("/public/videos/LevelDesignOverview.mp4"),
+        media: ProjectMedia::Video("public/videos/LevelDesignOverview.mp4"),
         media_heading: Some("Level Showcase"),
         detail_images: &[
-            ("Level Overview", "/public/images/SkyIslandOverview.png", "Overhead view of the sky island's buildings, terrain, and connecting bridges"),
-            ("Vista", "/public/images/SkyIslandVista.png", "View across the island toward trees and a bridge leading to a floating island"),
+            ("Level Overview", "public/images/SkyIslandOverview.png", "Overhead view of the sky island's buildings, terrain, and connecting bridges"),
+            ("Vista", "public/images/SkyIslandVista.png", "View across the island toward trees and a bridge leading to a floating island"),
         ],
         gameplay_video: None,
         link: None,
@@ -247,7 +247,7 @@ const PROJECTS: [Project; 7] = [
         group: ProjectGroup::School,
         tools: "DGL Engine · Raycasting · Hard Shadows",
         description: "LightReading is a team-developed top-down game made with the DGL engine. I implemented light and shadow detection using raycasting and developed the hard-shadow portion of the project.",
-        media: ProjectMedia::Video("/public/videos/LightReadingOverview.mp4"),
+        media: ProjectMedia::Video("public/videos/LightReadingOverview.mp4"),
         media_heading: Some("Gameplay Showcase"),
         detail_images: &[],
         gameplay_video: None,
@@ -423,8 +423,8 @@ fn Resume() -> impl IntoView {
                         <li>"Unity"</li>
                         <li>"OpenGL"</li>
                         <li>"Blender"</li>
-                        <li>"egui"</li>
-                        <li>"JSON Serialization"</li>
+                        <li class="resume-screen-only">"egui"</li>
+                        <li class="resume-screen-only">"JSON Serialization"</li>
                     </ul>
                 </section>
                 <section class="resume-section" aria-labelledby="resume-projects">
