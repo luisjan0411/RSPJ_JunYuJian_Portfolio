@@ -29,6 +29,12 @@ const assert = require('node:assert/strict');
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     await page.goto(`${base}#projects`);
+    for (const [label, heading] of [['Home', 'home-heading'], ['About', 'about-heading'], ['Résumé', 'resume-heading'], ['Projects', 'projects-heading']]) {
+      await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: label, exact: true }).click();
+      await page.locator(`#${heading}`).waitFor({ state: 'visible' });
+      assert.equal(await page.locator('.page-panel:visible').count(), 1);
+      assert.equal(await page.getByRole('navigation').getByRole('link', { name: label, exact: true }).getAttribute('aria-current'), 'page');
+    }
     await page.locator('.project-card').first().waitFor();
     const routes = await page.locator('.project-card').evaluateAll(cards => cards.map(card => card.getAttribute('href')));
     assert.equal(routes.length, 7);
