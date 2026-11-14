@@ -41,7 +41,7 @@ pub(crate) fn Home() -> impl IntoView {
                 <h2 id="home-creative">"Art & Design"</h2>
                 <ul>
                     <li>"Creating custom pixel art for games."</li>
-                    <li>"Modeling 3D characters and environments."</li>
+                    <li>"Modeling and animate 3D characters and environments."</li>
                     <li>"Designing levels and composing game environments."</li>
                 </ul>
             </section>
