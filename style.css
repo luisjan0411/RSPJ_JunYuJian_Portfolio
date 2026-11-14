@@ -483,21 +483,25 @@ p {
   max-width: 46rem;
 }
 
-.home-sections {
+.home-sections, .about-sections {
   max-width: 46rem;
   margin-top: 2rem;
   display: grid;
   gap: 1rem;
 }
 
-.home-card {
+.home-card, .about-card {
   padding: clamp(1rem, 3vw, 1.5rem);
   border: 1px solid var(--line);
   border-radius: .5rem;
   background: color-mix(in srgb, var(--ink) 3%, var(--paper));
 }
 
-.home-card h2 {
+.about-card {
+  min-height: 9rem;
+}
+
+.home-card h2, .about-card h2 {
   margin: 0 0 .75rem;
   font: 650 1.15rem/1.4 Inter, system-ui, sans-serif;
   letter-spacing: normal;

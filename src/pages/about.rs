@@ -5,6 +5,20 @@ pub(crate) fn About() -> impl IntoView {
     view! {
         <h1 id="about-heading">"About"</h1>
         <div class="about-content">
+            <div class="about-sections">
+                <section class="about-card" aria-labelledby="about-motivation">
+                    <h2 id="about-motivation">"Why I Make Games"</h2>
+                    // Add your motivation for making games here.
+                </section>
+                <section class="about-card" aria-labelledby="about-process">
+                    <h2 id="about-process">"How I Like to Develop"</h2>
+                    // Add your preferred development process here.
+                </section>
+                <section class="about-card" aria-labelledby="about-direction">
+                    <h2 id="about-direction">"Where I Want to Go"</h2>
+                    // Add your future direction here.
+                </section>
+            </div>
             <div class="about-links">
                 <a class="button about-button" href="https://github.com/luisjan0411" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
