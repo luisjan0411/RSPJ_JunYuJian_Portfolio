@@ -423,8 +423,6 @@ fn Resume() -> impl IntoView {
                         <li>"Unity"</li>
                         <li>"OpenGL"</li>
                         <li>"Blender"</li>
-                        <li class="resume-screen-only">"egui"</li>
-                        <li class="resume-screen-only">"JSON Serialization"</li>
                     </ul>
                 </section>
                 <section class="resume-section" aria-labelledby="resume-projects">

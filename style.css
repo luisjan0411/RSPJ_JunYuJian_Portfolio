@@ -480,10 +480,6 @@ p {
 }
 
 @media print {
-  .resume-screen-only {
-    display: none;
-  }
-
   body:has(.resume-sheet):has([aria-labelledby="resume-heading"]:not([hidden])) {
     background: #fff;
   }
