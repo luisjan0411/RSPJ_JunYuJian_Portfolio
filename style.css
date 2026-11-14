@@ -479,6 +479,21 @@ p {
   margin: 0;
 }
 
+.about-content {
+  max-width: 46rem;
+}
+
+.about-content p + p {
+  margin-top: 1.25rem;
+}
+
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
 @media print {
   body:has(.resume-sheet):has([aria-labelledby="resume-heading"]:not([hidden])) {
     background: #fff;
